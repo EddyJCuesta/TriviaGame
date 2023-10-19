@@ -11,9 +11,11 @@ function TriviaCard({ question, onAnswerSelect }) {
     onAnswerSelect(option === correct_answer);
   };
 
+  const decodedQuestion = new DOMParser().parseFromString(questionText, 'text/html').body.textContent;
+
   return (
     <div>
-      <h3>{questionText}</h3>
+      <h3 dangerouslySetInnerHTML={{ __html: decodedQuestion }} />
       <ul>
         {allAnswers.map((option, index) => (
           <li

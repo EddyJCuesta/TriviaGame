@@ -15,6 +15,7 @@ function App() {
     })
       .then((res) => {
         setQuestions(res.data.results); // Update the state with fetched questions
+        console.log(res.data.results)
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
