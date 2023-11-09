@@ -9,7 +9,6 @@ function LandingPage({ onStartGame }) {
   };
 
   const startGame = () => {
-    // Pass the selected difficulty to the parent component (App)
     onStartGame(difficulty);
   };
 
